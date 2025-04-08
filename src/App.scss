@@ -1,0 +1,64 @@
+/* Basic reset and body styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+
+/* Styling for the list container */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Styling for the list itself */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for each list item */
+li {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Add some space between image and text */
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Styling for the name */
+h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Styling for the bio */
+p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Styling for the image */
+img {
+  max-width: 80px; /* Slightly smaller image */
+  height: auto;
+  border-radius: 4px; /* Slightly rounded corners */
+  display: block;
+}
