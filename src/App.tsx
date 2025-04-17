@@ -5,9 +5,6 @@ import Program from './components/Program';
 import { Person } from './data';
 
 
-
-
-
 export default function App() {
   const [data, setData] = useState<Person[]>([]);
 
@@ -23,7 +20,7 @@ export default function App() {
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
         const rawData: any[][] = XLSX.utils.sheet_to_json(worksheet, { header: 1});
-        // console.log(rawData.slice(1));
+        console.log(rawData.slice(1));
         const extractedData: Person[] = rawData.slice(1).map((row) => ({
           name: row[1],   // Column B
           shows: row[3].split(', '),    // Column D

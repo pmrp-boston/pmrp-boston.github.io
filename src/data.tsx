@@ -16,6 +16,14 @@ export interface Person {
   bio: string;
 }
 
+export interface Show {
+  showName: string;
+  writerCredit?: string;
+  directorCredit?: string;
+  description?: string;
+  credits: Person[];
+}
+
 // This includes ONLY the names of the shows that should be displayed for this production
 // and associates them with their string keys
 export const showNames = {
@@ -23,3 +31,17 @@ export const showNames = {
      'Townies & Dragons': 'Townies & Dragons: Barrel Full of Peril',
      'Captain Bellamy': 'The Bonnie Tales of Captain Bellamy: Song of Trickery',
 }
+
+// Function to group people by show
+export const groupPeopleByShow = (people: Person[]) => {
+  const grouped: { [key in ShowKeys]: Person[] } = {} as { [key in ShowKeys]: Person[] };
+  people.forEach(person => {
+    person.shows.forEach(show => {
+      if (!grouped[show]) {
+        grouped[show] = [];
+      }
+      grouped[show]!.push(person);
+    });
+  });
+  return grouped;
+};

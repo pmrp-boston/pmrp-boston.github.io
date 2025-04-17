@@ -62,3 +62,158 @@ img {
   border-radius: 4px; /* Slightly rounded corners */
   display: block;
 }
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400;1,600&family=Limelight&family=Teko&display=swap");
+
+// $wideBannerUrl: ''
+$wideBannerWidth: 765px;
+
+$black: #0d0d0d;
+$white: #f2f2f2;
+$yellow1: #fbf2c3;
+$yellow2: #f2e205;
+$red: #951015;
+
+$text-primary: $black;
+$text-secondary: $red;
+$text-header: $white;
+$background-dark: $red;
+$background-neutral: $yellow1;
+$text-highlight: $yellow2;
+$highlight: $red;
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: auto;
+  max-width: $wideBannerWidth;
+  background-color: $background-dark;
+  h3 {
+    font-size: 3em;
+    font-family: "Teko", sans-serif;
+    margin: 0;
+    text-align: center;
+  }
+  h4 {
+    &.postHeader {
+      color: $text-header;
+    }
+    font-size: 1.5em;
+    font-family: "Teko", sans-serif;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: $highlight;
+    cursor: pointer;
+  }
+}
+header {
+  text-align: center;
+  .preHeader {
+    text-transform: uppercase;
+    font-family: "Limelight", sans-serif;
+    margin: 0;
+    color: white;
+    background-color: black;
+  }
+  h3 {
+    margin-top: 4px;
+  }
+  .heroBannerImg {
+    img {
+      width: 100%;
+    }
+  }
+}
+.highlightText {
+  color: $text-highlight;
+}
+.content {
+  margin: 2px;
+}
+.programBlock {
+  background-color: $background-neutral;
+  // border: 1px solid black;
+  border-radius: 5px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  &-header {
+    h3 {
+      font-size: 3em;
+    }
+  }
+  .highlightCredit {
+    display: block;
+  }
+  h3 {
+    margin: 0;
+    text-align: center;
+  }
+  .singleCredit {
+    display: flex;
+    padding: 6px 0;
+
+    .dots {
+      content: "";
+      margin-top: auto;
+      margin-bottom: 4px;
+      border: 1px dashed black;
+      flex-grow: 2;
+    }
+
+    .wrapFix {
+      width: min-content;
+    }
+
+    &-name {
+      text-align: right;
+      align-self: flex-end;
+    }
+    &-role {
+      align-self: flex-end;
+    }
+  }
+}
+
+.biosBlock {
+  background-color: $background-neutral;
+  * {
+    margin: 0;
+  }
+  &-title {
+    text-align: center;
+    padding-top: 8px;
+  }
+  &-singleBio {
+    padding: 16px;
+    margin-bottom: 16px;
+    &--title {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    &::after {
+      content: "";
+      border: 1px solid $text-secondary;
+      width: 50%;
+      margin-top: 20px;
+      position: absolute;
+      display: block;
+      margin-left: 25%;
+      left: 0;
+    }
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+.auditionFooter {
+  background-color: $background-neutral;
+  padding: 16px;
+  text-align: center;
+  font-size: larger;
+  a {
+    margin: 8px;
+    display: block;
+  }
+}
