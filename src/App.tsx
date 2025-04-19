@@ -15,6 +15,7 @@ export default function App() {
       );
       const csvData = await response.text();
       const extractedData = processData(csvData);
+      console.log(extractedData);
       setData(extractedData);
     } catch (error) {
       console.error('Error fetching data from Google Sheet:', error);
@@ -42,7 +43,7 @@ export default function App() {
   const processCsvData = (csvData: any[]): Person[] => {
     return csvData.map((row: any) => ({
       name: row["Full Name"],
-      shows: (row["Show(s)"] || '').split(', '),
+      shows: (row["Show(s)"] || '').split(',').map((show: string) => show.trim()),
       roles: row.Role,
       bio: row.Bio,
     })).filter((person: Person) => person.name);

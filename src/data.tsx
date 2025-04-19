@@ -23,6 +23,7 @@ export interface Show {
   directorCredit?: string;
   description?: string;
   credits: Person[];
+  foleyCredits: Person[];
 }
 
 // This includes ONLY the names of the shows that should be displayed for this production
@@ -41,7 +42,7 @@ export const groupPeopleByShow = (people: Person[]) => {
       if (!grouped[show]) {
         grouped[show] = [];
       }
-      if (!person.roles.includes('Writer') && !person.roles.includes('Director')) {
+      if (!person.roles.includes('Writer') && !person.roles.includes('Director') && !person.roles.includes('Adapted') && !person.roles.includes('Foley')) {
         grouped[show]!.push(person);
       }
     });

@@ -2,13 +2,14 @@ import useWindowDimensions from "../useWindowDimensions.tsx";
 import { Person, Show } from '../data.js';
 
 const CreditsBlock = ({ show, goToBio }: { show: Show, goToBio: (name: string) => void }) => {
-  const { showName, writerCredit, adapterCredit, directorCredit, description, credits } = show;
+  const { showName, writerCredit, adapterCredit, directorCredit, description, credits, foleyCredits } = show;
 
 
   return (
     <div className="programBlock">
       <div className="programBlock-header">
-        <h3>{showName}</h3>
+        {showName ? <h3>{showName}</h3> : <h3>Crew</h3>}
+
         <div className="programBlock-header--highlightCredits">
 
           {directorCredit && (
@@ -30,6 +31,14 @@ const CreditsBlock = ({ show, goToBio }: { show: Show, goToBio: (name: string) =
       {credits.map((credit) => (
         <SingleCredit credit={credit} goToBio={goToBio} />
       ))}
+      {foleyCredits.length > 0 && (
+        <div>
+          <div className="foleyDivider"></div>
+          {foleyCredits.map((credit) => (
+            <SingleCredit credit={credit} goToBio={goToBio} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

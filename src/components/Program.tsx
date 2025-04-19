@@ -11,23 +11,26 @@ const Program = ({ data }: { data: Person[] }) => {
 
   const showInfo = [] as Show[];
   for (const show in peopleByShow) {
+    // console.log(show);
     const showName = showNames[show as ShowKeys];
     const credits = peopleByShow[show as ShowKeys];
     const writerCredit = data.find((person) => person.shows.includes(show as ShowKeys) && person.roles.includes("Writer"))?.name;
     const directorCredit = data.find((person) => person.shows.includes(show as ShowKeys) && person.roles.includes("Director"))?.name;
     const adapterCredit = data.find((person) => person.shows.includes(show as ShowKeys) && person.roles.match(/Adapted/i))?.name;
+    const foleyCredits = data.filter((person) => person.shows.includes(show as ShowKeys) && person.roles.match(/Foley/i));
     const showData = {
       [show as ShowKeys]: {
         showName,
         writerCredit,
         adapterCredit,
         directorCredit,
-        credits
+        credits,
+        foleyCredits
       },
     };
     showInfo.push(showData[show as ShowKeys]);
   }
-  // console.log(showInfo)
+  console.log(showInfo)
   // return showInfo
 
 
