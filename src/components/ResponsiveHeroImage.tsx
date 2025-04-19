@@ -1,9 +1,7 @@
-import React from 'react';
-
 const ResponsiveHeroImage = () => {
   return (
-    <div>
-      {/* ResponsiveHeroImage content */}
+    <div className='heroBannerImg'>
+      <img src="./DangerousBannerSimple.png" alt="The Post Meridian Radio Players Presents: Dangerous Adventures!" className="heroBannerImage" />
     </div>
   );
 };

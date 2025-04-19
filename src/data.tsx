@@ -19,6 +19,7 @@ export interface Person {
 export interface Show {
   showName: string;
   writerCredit?: string;
+  adapterCredit?: string;
   directorCredit?: string;
   description?: string;
   credits: Person[];
@@ -27,9 +28,9 @@ export interface Show {
 // This includes ONLY the names of the shows that should be displayed for this production
 // and associates them with their string keys
 export const showNames = {
-     'Dangerous Game': 'The Most Dangerous Game',
-     'Townies & Dragons': 'Townies & Dragons: Barrel Full of Peril',
-     'Captain Bellamy': 'The Bonnie Tales of Captain Bellamy: Song of Trickery',
+  'Dangerous Game': 'The Most Dangerous Game',
+  'Townies & Dragons': 'Townies & Dragons: Barrel Full of Peril',
+  'Captain Bellamy': 'The Bonnie Tales of Captain Bellamy: Song of Trickery',
 }
 
 // Function to group people by show
@@ -40,7 +41,9 @@ export const groupPeopleByShow = (people: Person[]) => {
       if (!grouped[show]) {
         grouped[show] = [];
       }
-      grouped[show]!.push(person);
+      if (!person.roles.includes('Writer') && !person.roles.includes('Director')) {
+        grouped[show]!.push(person);
+      }
     });
   });
   return grouped;
