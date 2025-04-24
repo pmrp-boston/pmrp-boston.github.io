@@ -15,7 +15,7 @@ const Program = ({ data }: { data: Person[] }) => {
     const showName = showNames[show as ShowKeys];
     const credits = peopleByShow[show as ShowKeys];
     const writerCredit = data.find((person) => person.shows.includes(show as ShowKeys) && person.roles.includes("Writer"))?.name;
-    const directorCredit = data.find((person) => person.shows.includes(show as ShowKeys) && person.roles.includes("Director"))?.name;
+    const directorCredits = data.filter((person) => person.shows.includes(show as ShowKeys) && person.roles.includes("Director"));
     const adapterCredit = data.find((person) => person.shows.includes(show as ShowKeys) && person.roles.match(/Adapted/i))?.name;
     const foleyCredits = data.filter((person) => person.shows.includes(show as ShowKeys) && person.roles.match(/Foley/i));
     const showData = {
@@ -23,7 +23,7 @@ const Program = ({ data }: { data: Person[] }) => {
         showName,
         writerCredit,
         adapterCredit,
-        directorCredit,
+        directorCredits,
         credits,
         foleyCredits
       },
@@ -44,7 +44,7 @@ const Program = ({ data }: { data: Person[] }) => {
         <div className="credits">
           {/*<ATFProgramInfo />*/}
           {showInfo.map((show) => (
-            <CreditsBlock show={show} goToBio={scrollToBio} />
+            <CreditsBlock show={show} goToBio={scrollToBio} crewBlock={!show.showName} />
           ))}
           {/*<BTFProgramInfo />*/}
         </div>

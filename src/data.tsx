@@ -20,7 +20,7 @@ export interface Show {
   showName: string;
   writerCredit?: string;
   adapterCredit?: string;
-  directorCredit?: string;
+  directorCredits: Person[];
   description?: string;
   credits: Person[];
   foleyCredits: Person[];

@@ -1,8 +1,8 @@
 import useWindowDimensions from "../useWindowDimensions.tsx";
 import { Person, Show } from '../data.js';
 
-const CreditsBlock = ({ show, goToBio }: { show: Show, goToBio: (name: string) => void }) => {
-  const { showName, writerCredit, adapterCredit, directorCredit, description, credits, foleyCredits } = show;
+const CreditsBlock = ({ show, goToBio, crewBlock }: { show: Show, goToBio: (name: string) => void, crewBlock: boolean }) => {
+  const { showName, writerCredit, adapterCredit, directorCredits, description, credits, foleyCredits } = show;
 
 
   return (
@@ -12,13 +12,21 @@ const CreditsBlock = ({ show, goToBio }: { show: Show, goToBio: (name: string) =
 
         <div className="programBlock-header--highlightCredits">
 
-          {directorCredit && (
-            <a onClick={() => goToBio(directorCredit)}>
-              <h4 className="highlightCredit">Directed by {directorCredit}
+          {directorCredits.length > 0 && (
+            <a onClick={() => goToBio(directorCredits[0].name)} className="highlightCredit">
+              <h4 className="highlightCredit">Directed by {directorCredits[0].name}
                 <span className="material-symbols-outlined">
                   history_edu
                 </span></h4>
 
+            </a>
+          )}
+          {directorCredits.length > 1 && (
+            <a onClick={() => goToBio(directorCredits[1].name)} className="highlightCredit">
+              <h4 className="highlightCredit">Directed by {directorCredits[1].name}
+                <span className="material-symbols-outlined">
+                  history_edu
+                </span></h4>
             </a>
           )}
 
@@ -33,7 +41,7 @@ const CreditsBlock = ({ show, goToBio }: { show: Show, goToBio: (name: string) =
       ))}
       {foleyCredits.length > 0 && (
         <div>
-          <div className="foleyDivider"></div>
+          {!crewBlock && <div className="foleyDivider"></div>}
           {foleyCredits.map((credit) => (
             <SingleCredit credit={credit} goToBio={goToBio} />
           ))}
