@@ -23,7 +23,7 @@ const CreditsBlock = ({ show, goToBio, crewBlock }: { show: Show, goToBio: (name
           )}
           {directorCredits.length > 1 && (
             <a onClick={() => goToBio(directorCredits[1].name)} className="highlightCredit">
-              <h4 className="highlightCredit">Directed by {directorCredits[1].name}
+              <h4 className="highlightCredit">Assistant Directed by {directorCredits[1].name}
                 <span className="material-symbols-outlined">
                   history_edu
                 </span></h4>
