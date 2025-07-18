@@ -1,0 +1,30 @@
+<div class="programBlock">
+	<div class="programBlock-header">
+		<h2>{{ include.show.name }}</h2>
+
+		<div class="programBlock-header--highlightCredits"></div>
+	</div>
+	<p>{{ include.show.description }}</p>
+	{% for credit in include.show.credits %}
+		<dl class="singleCredit">
+			<dt class="singleCredit-role">
+        {% for role in credit.roles %}
+          {{ role }}, 
+        {% endfor %}
+      </dt>
+			<dt class="dots"></dt>
+			<a href="#{{ credit.name }}" class="singleCredit-name">
+				{{ credit.name }}
+			</a>
+		</dl>
+	{% endfor %}
+	{% for credit in include.show.foleyCredits %}
+		<dl class="singleCredit">
+			<dt class="singleCredit-role">Foley</dt>
+			<dt class="dots"></dt>
+			<a href="#{{ credit.name }}" class="singleCredit-name">
+				{{ credit.name }}
+			</a>
+		</dl>
+	{% endfor %}
+</div>

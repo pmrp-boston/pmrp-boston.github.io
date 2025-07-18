@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/public/assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="/public/assets/css/solid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="icon" href="/favicon.ico" />
+    <title>About</title>
+  </head>
+  <body>
+    <nav class="topMenu">
+      <a href="#content" class="skipToContent">
+        <span>Skip to Content</span>
+      </a>
+      <details class="mobileMenu">
+        <summary class="menuBar">
+            <div id="logo">
+              <img src="./smallLogo.png" alt="The Post Meridian Radio Players" />
+            </div>
+          <i class="fa-solid fa-bars"></i>
+        </summary>
+        <ul class="mainMenu">
+          <li>
+            <a href="/">Program</a>
+          </li>
+          <li>
+            <a href="/directions">Directions</a>
+          </li>
+          <li>
+            <a href="/information">Information and Accessibility</a>
+          </li>
+        </ul>
+        <ul class="secondaryMenu">
+          <li>
+            <a href="https://www.pmrp.org" target="_blank" rel="noopener noreferrer">
+              PMRP Main Website
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.zazzle.com/store/postmeridianradio" target="_blank" rel="noopener noreferrer">
+              Store
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+          <li>
+            <button class="toggleDarkTheme toggleDarkTheme--${darkTheme ? 'light' : 'dark'}" onClick={setDarkTheme} aria-pressed={darkTheme}>
+              Turn Dark Mode {darkModeText}
+            </button>
+          </li>
+        </ul>
+      </details>
+      <div class="desktopMenu">
+          <div id="logo">
+            <img src="./logo.png" alt="The Post Meridian Radio Players" />
+          </div>
+        <div class="menuItems">
+          <ul class="mainMenu">
+            <li>
+              <a href="/">Program</a>
+            </li>
+            <li>
+              <a href="/directions">Directions</a>
+            </li>
+            <li>
+              <a href="/information">Information and Accessibility</a>
+            </li>
+          </ul>
+          <ul class="secondaryMenu">
+            <li>
+              <a href="https://www.pmrp.org" target="_blank" rel="noopener noreferrer">
+                PMRP Main Website
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </li>
+            <li>
+              <a href="https://www.zazzle.com/store/postmeridianradio" target="_blank" rel="noopener noreferrer">
+                Store
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li>
+              <button class="toggleDarkTheme toggleDarkTheme--${darkTheme ? 'light' : 'dark'}" onClick={setDarkTheme}>
+                Turn Dark Mode {darkModeText}
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav >
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<meta
+		charset="UTF-8"/>
+		<!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/public/assets/css/fontawesome.css" rel="stylesheet"/>
+		<link href="/public/assets/css/solid.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+		<link rel="icon" href="/favicon.ico"/>
+		<title>{{ page.title }}</title>
+	</head>
+	<body class="{{ page.slug }}">
+		{% include header.html %}
+		<main id="content">
+			<div class="programHeader">
+				<h4 class="preHeader">The Post Meridian Radio Players Present</h4>
+				<div class='heroBannerImg'>
+					<img src={{ page.imgSrc }} alt={{ page.imgAlt }} class="heroBannerImage"/>
+				</div>
+			</div>
+			{% include program.html %}
+			{% include bios.html %}
+		</main>
+	</body>
+</html>

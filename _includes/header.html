@@ -1,0 +1,81 @@
+<nav class="topMenu">
+      <a href="#content" class="skipToContent">
+        <span>Skip to Content</span>
+      </a>
+      <details class="mobileMenu">
+        <summary class="menuBar">
+            <div id="logo">
+              <img src="./smallLogo.png" alt="The Post Meridian Radio Players" />
+            </div>
+          <i class="fa-solid fa-bars"></i>
+        </summary>
+        <ul class="mainMenu">
+          <li>
+            <a href="/">Program</a>
+          </li>
+          <li>
+            <a href="/directions">Directions</a>
+          </li>
+          <li>
+            <a href="/information">Information and Accessibility</a>
+          </li>
+        </ul>
+        <ul class="secondaryMenu">
+          <li>
+            <a href="https://www.pmrp.org" target="_blank" rel="noopener noreferrer">
+              PMRP Main Website
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.zazzle.com/store/postmeridianradio" target="_blank" rel="noopener noreferrer">
+              Store
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </li>
+          <li>
+            <button class="toggleDarkTheme toggleDarkTheme--${darkTheme ? 'light' : 'dark'}" onClick={setDarkTheme} aria-pressed={darkTheme}>
+              Turn Dark Mode {darkModeText}
+            </button>
+          </li>
+        </ul>
+      </details>
+      <div class="desktopMenu">
+          <div id="logo">
+            <img src="./logo.png" alt="The Post Meridian Radio Players" />
+          </div>
+        <div class="menuItems">
+          <ul class="mainMenu">
+            <li>
+              <a href="/">Program</a>
+            </li>
+            <li>
+              <a href="/directions">Directions</a>
+            </li>
+            <li>
+              <a href="/information">Information and Accessibility</a>
+            </li>
+          </ul>
+          <ul class="secondaryMenu">
+            <li>
+              <a href="https://www.pmrp.org" target="_blank" rel="noopener noreferrer">
+                PMRP Main Website
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </li>
+            <li>
+              <a href="https://www.zazzle.com/store/postmeridianradio" target="_blank" rel="noopener noreferrer">
+                Store
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li>
+              <button class="toggleDarkTheme toggleDarkTheme--${darkTheme ? 'light' : 'dark'}" onClick={setDarkTheme}>
+                Turn Dark Mode {darkModeText}
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav >

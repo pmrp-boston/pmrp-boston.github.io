@@ -1,0 +1,89 @@
+/**
+ * Theme-specific styles
+ */
+
+@import "_themes";
+
+@function theme($key) {
+  @if map-has-key($current-theme, $key) {
+    @return map-get($current-theme, $key);
+  }
+
+  @else {
+    @warn "Key '#{$key}' not found in current theme.";
+    @return null;
+  }
+}
+
+@mixin apply-theme() {
+  a {
+    color: theme("menu-links");
+  }
+
+  nav {
+    background-color: theme("menu-background");
+
+    .menuBar {
+      color: theme("text-primary");
+    }
+  }
+
+  .backToTop {
+    background-color: theme("menu-background");
+  }
+
+  .feedback {
+    background-color: theme("menu-background");
+  }
+
+  .wrapper {
+    margin: auto;
+    background-color: theme("background-dark");
+
+    h4 {
+      &.postHeader {
+        color: theme("text-header");
+      }
+    }
+  }
+
+  #content {
+    background-color: theme("body-background");
+    color: theme("text-primary");
+
+    h1,
+    h2,
+    h3 {
+      color: theme("text-header");
+    }
+
+    .buttonsAndLinks {
+      a {
+        color: theme("menu-links");
+      }
+    }
+  }
+
+  .highlightText {
+    color: theme("text-highlight");
+  }
+
+
+
+  .programBlock {
+    background-color: theme("body-background");
+
+    .foleyDivider {
+      border: 1px solid theme("text-secondary");
+    }
+  }
+
+  .biosBlock {
+    background-color: theme("body-background");
+
+    &::after {
+      border: 1px solid theme("text-secondary");
+    }
+
+  }
+}

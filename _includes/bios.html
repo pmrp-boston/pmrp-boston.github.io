@@ -1,0 +1,13 @@
+<div classname="biosBlock">
+	<h3 classname="biosBlock-title">Cast & Crew Bios</h3>
+	<div classname="biosBlock-wrapper">
+		{% for bio in page.bios %}
+			<div id="{{ bio.name }}">
+				<div classname="biosBlock-singleBio">
+					<h4 classname="biosBlock-singleBio--title">{{ bio.name }}</h4>
+					<div classname="biosBlock-singleBio--copyText">{{ bio.bio }}</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

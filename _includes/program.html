@@ -1,0 +1,33 @@
+<div class="ATFshowInfo">
+	<h1 class="fullTitle">{{ page.title }}</h1>
+	<div class="dates">
+		{%for date in page.dates %}
+			<span key={index} class="date">
+				{{ date }}
+			</span>
+		{% endfor %}
+	</div>
+	<div class="locations">
+		{% for location in page.locations %}
+			<a href="#" key={index} class="location">
+				{{ location }}
+			</a>
+		{% endfor %}
+	</div>
+	<p>{{ page.intro }}</p>
+
+	<div class="buttonsAndLinks">
+		<a href={{ page.ticketLink }} target="_blank" class="ticketLink">
+			Reserve your seat
+		</a>
+	</div>
+	<p>{{ page.programInfo1 }}</p>
+	<p>{{ page.programInfo2 }}</p>
+	<div class="buttonsAndLinks">
+		<a href="/directions/{{ page.slug }}">Directions</a>
+		<a href="/information/{{ page.slug }}">Information and Accessibility</a>
+	</div>
+</div>
+{% for show in page.shows %}
+    {% include creditsBlock.html show=show %}
+{% endfor %}
