@@ -4,20 +4,18 @@
       </a>
       <details class="mobileMenu">
         <summary class="menuBar">
-            <div id="logo">
-              <img src="./smallLogo.png" alt="The Post Meridian Radio Players" />
-            </div>
+            <div id="logo"></div>
           <i class="fa-solid fa-bars"></i>
         </summary>
         <ul class="mainMenu">
           <li>
-            <a href="/">Program</a>
+            <a href="/program/{{ page.slug }}/">Program</a>
           </li>
           <li>
-            <a href="/directions">Directions</a>
+            <a href="/program/{{ page.slug }}/directions">Directions</a>
           </li>
           <li>
-            <a href="/information">Information and Accessibility</a>
+            <a href="/program/{{ page.slug }}/information">Information and Accessibility</a>
           </li>
         </ul>
         <ul class="secondaryMenu">
@@ -33,27 +31,22 @@
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </li>
-          <li>
-            <button class="toggleDarkTheme toggleDarkTheme--${darkTheme ? 'light' : 'dark'}" onClick={setDarkTheme} aria-pressed={darkTheme}>
-              Turn Dark Mode {darkModeText}
-            </button>
-          </li>
         </ul>
       </details>
       <div class="desktopMenu">
           <div id="logo">
-            <img src="./logo.png" alt="The Post Meridian Radio Players" />
+            <img src="https://pmrp.nyc3.cdn.digitaloceanspaces.com/logo.png" alt="The Post Meridian Radio Players" />
           </div>
         <div class="menuItems">
           <ul class="mainMenu">
             <li>
-              <a href="/">Program</a>
+              <a href="/program/{{ page.slug }}/">Program</a>
             </li>
             <li>
-              <a href="/directions">Directions</a>
+              <a href="/program/{{ page.slug }}/directions">Directions</a>
             </li>
             <li>
-              <a href="/information">Information and Accessibility</a>
+              <a href="/program/{{ page.slug }}/information">Information and Accessibility</a>
             </li>
           </ul>
           <ul class="secondaryMenu">
@@ -69,11 +62,6 @@
                 Store
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
-            </li>
-            <li>
-              <button class="toggleDarkTheme toggleDarkTheme--${darkTheme ? 'light' : 'dark'}" onClick={setDarkTheme}>
-                Turn Dark Mode {darkModeText}
-              </button>
             </li>
           </ul>
         </div>

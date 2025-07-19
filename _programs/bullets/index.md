@@ -1,6 +1,10 @@
 ---
 title: The Post Meridian Radio Players Present - Bullets Over Boston
+permalink: /program/bullets/
 slug: bullets
+theme: mysteries
+imgSrc: https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/bulletsbanner.png
+imgAlt: "Bullets Over Boston - Featuring: After the Thin Man! Samantha Spade!"
 programInfo2: The show runs for approximately 1 hour with no intermission. House doors open at 7:30 PM to give time to buy or pick up reserved tickets, purchase refreshments, and find your seat before the show starts at 8 PM.
 shows:
   - name: Samantha Spade and the Steve Starr Caper
@@ -83,6 +87,33 @@ shows:
       - name: "Marielle Boudreau"
         roles:
           - "Ensemble"
+  - name: Crew
+    credits:
+      - name: "Jeremy Holstein"
+        roles:
+          - "Producer"
+          - "Graphic Designer"
+      - name: "Meg Wickham"
+        roles:
+          - "Stage Manager"
+      - name: "Coraline Holstein"
+        roles:
+          - "Assitant Stage Manager"
+      - name: "Nick Henry"
+        roles:
+          - "Rehearsal Assistant"
+      - name: "Jay Sekora"
+        roles:
+          - "Sound Engineer"
+      - name: "Ray Zaslow"
+        roles:
+          - "Sound Board Op"
+      - name: "Karen Sarao"
+        roles:
+          - "House Manager"
+      - name: "Jaimie Carlson"
+        roles:
+          - "Foley Coordinator"
 bios:
   - name: "JB Brown"
     bio: "JB Brown (Announcer, After the Thin Man), a California native, has been active in the theatre arts for over thirty years. JB received a Master of Letters in Shakespeare and Performance as well as an MFA with an emphasis in directing Shakespeare from Mary Baldwin University in Staunton, Virginia. He has taught, acted, voice-acted, and directed with various academic and professional theatre groups over the years such as Mary Baldwin in association with the Blackfriars Playhouse, Utah Tech University, Utah Valley University, Hale Center Theatre-Orem, the Kingsmen Shakespeare Company, Sundance Summer Theatre, Utah Shakespeare Festival, and Motley Sounds. Some of his more notable acting performances include Benedick in Much Ado About Nothing, Dromio of Ephesus in The Comedy of Errors, Andrew Wyke in Sleuth, Major General Stanley in The Pirates of Penzance, John Barrymore in I Hate Hamlet, and Fin in One Foot for the Great Salt Lake Fringe Festival. Most recently, he has performed in Hale Center Theatre Orem’s A Christmas Carol as the Ghost of Christmas Present and Marley’s Ghost and locally in the Burlington Players production of The Book of Will as Henry Condell."

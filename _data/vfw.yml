@@ -1,0 +1,11 @@
+church:
+  name: "Guild Church"
+  address: "204 Elm St. North Cambridge, MA 02140"
+  bathrooms: "There are two bathrooms in the church, both on the lower level of the building. Upon entering the church, turn immediately to your right or left and proceed down the stairs then take the door on your left. The bathroom to the right contains 1 (one) stall and 2 (two) urinals as well as 1 (one) sink. The bathroom to the left containes 2 (two) stalls and 1 (one) sink."
+  seating: The church has traditional wooden pews in two rows on either side of the room with aisles at the left, right, and center.
+  moving: There are X steps at the church entrance and Y steps down to the lower level to reach either bathroom. The interior floor is hardwood with some irregularities due to age.
+  temperature: The church has ceiling fans and windows that can be cracked open but no air conditioning.
+
+mosesian:
+  name: "Mosesian Center for the Arts"
+  address: "321 Arsenal St. Watertown, MA 02472"

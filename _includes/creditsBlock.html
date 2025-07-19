@@ -8,10 +8,17 @@
 	{% for credit in include.show.credits %}
 		<dl class="singleCredit">
 			<dt class="singleCredit-role">
-        {% for role in credit.roles %}
-          {{ role }}, 
-        {% endfor %}
-      </dt>
+				{% if credit.roles.size > 1 %}
+					{% for role in credit.roles %}
+						{{ role }}{% unless forloop.last %},{% endunless %}
+					{% endfor %}
+				{% else %}
+					{% for role in credit.roles %}
+						{{ role }}
+					{% endfor %}
+				{% endif %}
+				</dt>
+			</dt>
 			<dt class="dots"></dt>
 			<a href="#{{ credit.name }}" class="singleCredit-name">
 				{{ credit.name }}

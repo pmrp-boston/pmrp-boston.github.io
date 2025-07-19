@@ -1,19 +1,66 @@
---- 
---- 
-@import "themes";
-@import "_theme-functions";
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400;1,600&family=Limelight&family=Teko&display=swap");
-// @import "@fontsource/atkinson-hyperlegible";
+/**
+ * Themes
+ */
 
-$current-theme: $dangerous-theme;
+ body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+ }
+
+body.summer-mysteries-theme {
+  --text-primary: #343446;
+  --text-secondary: #4d5031;
+  --text-header: #4d5031;
+  --background-dark: #343446;
+  --body-background: #d9d9d9;
+  --text-highlight: #4d5031;
+  --highlight: #f5320b;
+  --menu-links: red;
+  --menu-background: white;
+}
+
+body.summer-mysteries-theme-dark {
+  --text-primary: #343446;
+  --text-secondary: #4d5031;
+  --text-header: #4d5031;
+  --background-dark: #343446;
+  --body-background: #d9d9d9;
+  --text-highlight: #4d5031;
+  --highlight: #f5320b;
+  --menu-links: red;
+  --menu-background: white;
+}
+
+/* Default light theme before or without script*/
+.trek-theme {
+  --text-primary: #202020;
+  --text-secondary: #2f311e;
+  --text-header: #314858;
+  --background-dark: #110f47;
+  --body-background: #fdfdfd;
+  --text-highlight: #4d5031;
+  --highlight: #f5320b;
+  --menu-links: #8d2329;
+  --menu-background: #e3e8ed;
+}
+
+/* Default dark theme before or without script */
+@media (prefers-color-scheme: dark) {
+    .trek-theme {
+    --text-primary: #fff;
+    --text-secondary: #2f311e;
+    --text-header: #ff9096;
+    --background-dark: #110f47;
+    --body-background: #314858;
+    --text-highlight: #4d5031;
+    --highlight: #f5320b;
+    --menu-links: #f0e207;
+    --menu-background: #1c2831;
+  }
+}
 
 /* Basic reset and body styles */
 body {
-  font-family: "sans-serif";
-  // font-size: medium;
   margin: 0;
-  // padding: 12px 12px 36px 12px;
-  // background-color: #f4f4f4;
   color: #333;
 }
 
@@ -73,47 +120,17 @@ p {
 
 a {
   font-size: 1.05em;
+  color: var(--menu-links)
 }
 
 /* Styling for the image */
 img {
-  // max-width: 80px; /* Slightly smaller image */
   height: auto;
   border-radius: 4px;
   /* Slightly rounded corners */
   display: block;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400;1,600&family=Limelight&family=Teko&display=swap");
-
-body.dangerous {
-  $current-theme: $dangerous-theme !global;
-  @include apply-theme();
-}
-
-body.thirteen {
-  $current-theme: $thirteen-theme !global;
-  @include apply-theme();
-}
-
-body.menagerie {
-  $current-theme: $menagerie-theme !global;
-  @include apply-theme();
-}
-
-body.menagerie-dark {
-  $current-theme: $menagerie-dark-theme !global;
-  @include apply-theme();
-}
-
-body.bullets {
-  $current-theme: $bullets-theme !global;
-  @include apply-theme();
-}
-
-// body {
-//   padding: 0;
-// }
 
 .App {
   background-color: black;
@@ -130,6 +147,7 @@ body.bullets {
 }
 
 .feedback {
+  background-color: var(--menu-background);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -258,15 +276,18 @@ body.bullets {
     }
   }
 
+  nav {
+    background-color: var(--menu-background);
+  }
   .menuBar {
     display: none;
+    color: var(--text-primary);
 
     @media (max-width: 768px) {
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
-      // margin: .5em;
       font-size: 2em;
       width: 90%;
 
@@ -317,11 +338,18 @@ body.bullets {
 }
 
 #content {
+  background-color: var(--body-background);
+  color: var(--text-primary);
   padding: 0 12% 3em 12%;
 
   h1 {
     margin: 0;
   }
+
+  h1, h2, h3 {
+    color: var(--text-header);
+  }
+  
 
   @media (max-width: 769px) {
     padding-top: 2em;
@@ -392,12 +420,12 @@ body.bullets {
   }
 
   .programBlock {
-    // border-radius: 5px;
     border-top: 1px solid;
     padding: 16px 12px;
     margin: 24px 0;
 
     .foleyDivider {
+      border: 1px solid var(--text-secondary);
       width: 50%;
       margin-top: 20px;
       display: block;
@@ -455,13 +483,13 @@ body.bullets {
         }
       }
 
-      &-role {
+      .singlCredit-role {
         align-self: flex-end;
         max-width: 55%;
         flex-shrink: 0;
       }
 
-      &-name {
+      .singleCredit-name {
         text-align: right;
         align-self: flex-end;
 
@@ -486,16 +514,16 @@ body.bullets {
       margin: 0;
     }
 
-    &-title {
+    .biosBlock-title {
       text-align: center;
       padding-top: 8px;
     }
 
-    &-singleBio {
+    .biosBlock-singleBio {
       padding: 16px;
       margin-bottom: 16px;
 
-      &--title {
+      .biosBlock--title {
         text-align: center;
         margin-bottom: 8px;
       }
@@ -546,6 +574,7 @@ body.bullets {
 }
 
 .backToTop {
+  background-color: var(--menu-background);
   right: 0;
   position: fixed;
   bottom: 0;
@@ -557,7 +586,7 @@ body.bullets {
   flex-direction: column;
   align-items: center;
 
-  &--link {
+  .backToTop--link {
     display: block;
     width: 100%;
     height: 100%;
