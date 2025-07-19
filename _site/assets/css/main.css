@@ -11,7 +11,7 @@ body.summer-mysteries-theme {
   --text-secondary: #4d5031;
   --text-header: #4d5031;
   --background-dark: #343446;
-  --body-background: #d9d9d9;
+  --body-background: #f4f4f4;
   --text-highlight: #4d5031;
   --highlight: #f5320b;
   --menu-links: red;
@@ -46,16 +46,16 @@ body.summer-mysteries-theme-dark {
 /* Default dark theme before or without script */
 @media (prefers-color-scheme: dark) {
     .trek-theme {
-    --text-primary: #fff;
-    --text-secondary: #2f311e;
-    --text-header: #ff9096;
-    --background-dark: #110f47;
-    --body-background: #314858;
-    --text-highlight: #4d5031;
-    --highlight: #f5320b;
-    --menu-links: #f0e207;
-    --menu-background: #1c2831;
-  }
+      --text-primary: #fff;
+      --text-secondary: #2f311e;
+      --text-header: #ff9096;
+      --background-dark: #110f47;
+      --body-background: #314858;
+      --text-highlight: #4d5031;
+      --highlight: #f5320b;
+      --menu-links: #f0e207;
+      --menu-background: #1c2831;
+    }
 }
 
 /* Basic reset and body styles */
@@ -98,20 +98,32 @@ li:last-child {
 h2 {
   margin: 0 0 5px 0;
   font-size: 1.6em;
+  text-align: center;
 }
 
 h4 {
   font-size: 1.2em;
 }
 
+h3, h4 {
+  width: 60ch;
+  margin: auto;
+}
+
 /* Styling for text */
 p,
 span,
-li {
+li,
+dl,
+dt {
   margin: auto;
   font-size: 1.05em;
-  line-height: 1.4;
   max-width: 60ch;
+  font-size: 1.05em;
+}
+
+p, span {
+  line-height: 1.4;
 }
 
 p {
@@ -348,6 +360,27 @@ img {
 
   h1, h2, h3 {
     color: var(--text-header);
+    margin-top: 1em;
+    margin-bottom: .7em;
+  }
+
+  ul>li {
+    padding: .5em 0;
+    a {
+      font-size: 1.15em;
+    }
+  }
+  ul ul li {
+    padding-left: 24px;
+    padding: .2em 0 0 2em;
+    a {
+      font-size: 1.1em;
+    }
+  }
+
+  .warnings {
+    list-style-type: disc;
+    padding-left: 10%;
   }
   
 
@@ -545,6 +578,11 @@ img {
   }
 
   .directions {
+    h3 {
+        width: 60ch;
+        margin: auto;
+      }
+
     .photos {
       display: flex;
 
@@ -555,20 +593,7 @@ img {
       img {
         width: 100%;
       }
-
-    }
-  }
-
-  .tableOfContents {
-    ul {
-      li {
-        padding: 4px 0;
-        margin: unset;
-
-        ul>li {
-          padding-left: 24px;
-        }
-      }
+      
     }
   }
 }

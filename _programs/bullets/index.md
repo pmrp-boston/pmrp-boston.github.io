@@ -2,7 +2,7 @@
 title: The Post Meridian Radio Players Present - Bullets Over Boston
 permalink: /program/bullets/
 slug: bullets
-theme: mysteries
+theme: summer-mysteries
 imgSrc: https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/bulletsbanner.png
 imgAlt: "Bullets Over Boston - Featuring: After the Thin Man! Samantha Spade!"
 programInfo2: The show runs for approximately 1 hour with no intermission. House doors open at 7:30 PM to give time to buy or pick up reserved tickets, purchase refreshments, and find your seat before the show starts at 8 PM.

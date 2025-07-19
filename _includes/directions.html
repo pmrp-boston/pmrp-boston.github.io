@@ -1,263 +1,283 @@
-<main>
-
-	<ul classname="locationsList">
-		{% if page.locations.size > 1 %}
-			{% for location in page.locations %}
+<main id="content">
+	<ul class="locationsList">
+		{% if page.venues.size > 1 %}
+			{% for venue_key in page.venues %}
+				{% assign venue = site.data.venues[venue_key] %}
 				<li>
-					<a href={{ location }}>{location}</a>
+					<a href="#{{ venue_key }}">{{ venue.name }}</a>
 				</li>
 			{% endfor %}
 		{% endif %}
 	</ul>
-	<div id="VFW" classname="directions">
-		<h1>Directions to George Dilboy VFW Post 529</h1>
-		<div classname="tableOfContents">
-			<ul>
-				<li>
-					<a href="#transit">By Public Transit</a>
-				</li>
-				<li>
-					<a href="#driving">By Car</a>
-					<ul>
-						<li><a href="#parking">Parking</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#photos">Photos</a>
-				</li>
-			</ul>
-		</div>
-		<div id="transit">
-			<h2>By Public Transit</h2>
-			<h3>By Train</h3>
-			<p>The nearest subway (or "T") station to the VFW is the
-				<strong>Davis Square station</strong>. The VFW is 0.3 miles from the station or about 6 to 10 minutes by foot.</p>
-			<ol>
-				<li>
-					Exit the station onto
-					<strong>College Ave</strong>
-					then turn left and walk straight until you meet
-					<strong>Elm Street</strong>.
-				</li>
-				<li>
-					Turn left and follow Elm Street until you pass
-					<strong>Dragon Pizza</strong>
-					on your left.
-				</li>
-				<li>
-					Veer left onto
-					<strong>Summer Street</strong>, passing the
-					<strong>Winter Hill Bank</strong>. The VFW will be on your left.
-				</li>
-			</ol>
-			<h3>By Bus</h3>
-			<p>The closest bus stop to the VFW is the
-				<strong>87 stop</strong>
-				at the
-				<strong>intersection of Elm Street and Russel Street</strong>.</p>
-			<ol>
-				<li>
-					Exit the Davis Square T station onto
-					<strong>Holland Street</strong>
-					to catch the 87 bus.
-				</li>
-				<li>The bus will let you off right in front of our usual venue,
-					<strong>Guild Church</strong>. Face away from the church and cross Elm Street.</li>
-				<li>Continue along Russel Street toward the
-					<strong>Winter Hill Bank</strong>
-					and
-					<strong>Summer Street</strong>.</li>
-				<li>
-					Turn right onto Summer Street. The VFW will be on your left.
-				</li>
-			</ol>
-		</div>
-		<div id="driving">
-			<h2>By Car</h2>
-			<h3>From US-1 Northbound or Southbound</h3>
-			<ol>
-				<li>
-					Take
-					<strong>exit 31</strong>
-					following signs for
-					<strong>Route 16 East / Mystic Valley Parkway / Arlington / Everett</strong>.
-				</li>
-				<li>
-					Merge onto
-					<strong>Route 16 East</strong>
-					(Mystic Valley Parkway) and continue toward I-93 North.
-				</li>
-				<li>
-					Take the ramp to
-					<strong>merge onto I-93 North toward Boston</strong>.
-				</li>
-				<li>
-					Follow directions from I-93 below.
-				</li>
-			</ol>
-			<h3>From I-93 Northbound or Southbound</h3>
-			<ol>
-				<li>
-					Take
-					<strong>Exit 29</strong>
-					off of I-93 for MA-28 / MA-38 / Mystic Avenue / Somerville / Medford.
-				</li>
-				<li>
-					Merge onto
-					<strong>Mystic Avenue</strong>
-					(MA-38 South). Follow Mystic Ave for about
-					<strong>1 mile</strong>.
-				</li>
-				<li>
-					Follow signs for
-					<strong>McGrath Highway</strong>
-					(MA-28 South) to continue onto McGrath Highway.
-				</li>
-				<li>
-					Use the right lane to take the exit with signs for
-					<strong>Medford Street/Broadway</strong>.
-				</li>
-				<li>
-					You will come to a large roundabout,
-					<strong>Powder House Circle</strong>. Take the
-					<strong>second exit</strong>
-					onto
-					<strong>Holland Street</strong>.
-				</li>
-				<li>
-					Holland Street will turn into
-					<strong>Elm Street</strong>
-					as you approach Davis Square. Veer
-					<strong>left onto Summer Street</strong>
-					after passing the Davis Square MBTA station.
-				</li>
-				<li>
-					The VFW will be on your
-					<strong>left</strong>
-					at 351 Summer Street.
-				</li>
-			</ol>
-			<h3 id="parking">Parking</h3>
-			<p>The VFW has a dedicated parking lot with approximately 40 spaces including two (2) accessible parking spaces. Please be aware of signs indicating some of the spaces as resident only.</p>
-			<p>Metered street parking in Davis Square is free after 8pm. Please take care to avoid resident permit-only parking.</p>
-		</div>
-		<div id="photos">
-			<h2>Photos</h2>
-			<div classname="photos">
-				<figure>
-					<a href="https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/vfwentrance.jpg">
-						<img src="https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/vfwentrance.jpg" alt="The front entrance of the VFW building as seen from the outside. A flat paved path leads to double glass doors that open outward."/>
-					</a>
-					<figcaption>The front entrance to the VFW</figcaption>
-				</figure>
+	{% if page.venues contains "vfw" %}
+		<div id="vfw" class="directions">
+			<h1>Directions to George Dilboy VFW Post 529</h1>
+			<div class="tableOfContents">
+				<ul>
+					<li>
+						<a href="#vfw-transit">By Public Transit</a>
+					</li>
+					<li>
+						<a href="#vfw-driving">By Car</a>
+						<ul>
+							<li><a href="#vfw-parking">Parking</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#vfw-photos">Photos</a>
+					</li>
+				</ul>
+			</div>
+			<div id="vfw-transit">
+				<h2>By Public Transit</h2>
+				<h3>By Train</h3>
+				<p>The nearest subway (or "T") station to the VFW is the
+					<strong>Davis Square station</strong>. The VFW is 0.3 miles from the station or about 6 to 10 minutes by foot.</p>
+				<ol>
+					<li>
+						Exit the station onto
+						<strong>College Ave</strong>
+						then turn left and walk straight until you meet
+						<strong>Elm Street</strong>.
+					</li>
+					<li>
+						Turn left and follow Elm Street until you pass
+						<strong>Dragon Pizza</strong>
+						on your left.
+					</li>
+					<li>
+						Veer left onto
+						<strong>Summer Street</strong>, passing the
+						<strong>Winter Hill Bank</strong>. The VFW will be on your left.
+					</li>
+				</ol>
+				<h3>By Bus</h3>
+				<p>The closest bus stop to the VFW is the
+					<strong>87 stop</strong>
+					at the
+					<strong>intersection of Elm Street and Russel Street</strong>.</p>
+				<ol>
+					<li>
+						Exit the Davis Square T station onto
+						<strong>Holland Street</strong>
+						to catch the 87 bus.
+					</li>
+					<li>The bus will let you off right in front of our usual venue,
+						<strong>Guild Church</strong>. Face away from the church and cross Elm Street.</li>
+					<li>Continue along Russel Street toward the
+						<strong>Winter Hill Bank</strong>
+						and
+						<strong>Summer Street</strong>.</li>
+					<li>
+						Turn right onto Summer Street. The VFW will be on your left.
+					</li>
+				</ol>
+			</div>
+			<div id="vfw-driving">
+				<h2>By Car</h2>
+				<h3>From US-1 Northbound or Southbound</h3>
+				<ol>
+					<li>
+						Take
+						<strong>exit 31</strong>
+						following signs for
+						<strong>Route 16 East / Mystic Valley Parkway / Arlington / Everett</strong>.
+					</li>
+					<li>
+						Merge onto
+						<strong>Route 16 East</strong>
+						(Mystic Valley Parkway) and continue toward I-93 North.
+					</li>
+					<li>
+						Take the ramp to
+						<strong>merge onto I-93 North toward Boston</strong>.
+					</li>
+					<li>
+						Follow directions from I-93 below.
+					</li>
+				</ol>
+				<h3>From I-93 Northbound or Southbound</h3>
+				<ol>
+					<li>
+						Take
+						<strong>Exit 29</strong>
+						off of I-93 for MA-28 / MA-38 / Mystic Avenue / Somerville / Medford.
+					</li>
+					<li>
+						Merge onto
+						<strong>Mystic Avenue</strong>
+						(MA-38 South). Follow Mystic Ave for about
+						<strong>1 mile</strong>.
+					</li>
+					<li>
+						Follow signs for
+						<strong>McGrath Highway</strong>
+						(MA-28 South) to continue onto McGrath Highway.
+					</li>
+					<li>
+						Use the right lane to take the exit with signs for
+						<strong>Medford Street/Broadway</strong>.
+					</li>
+					<li>
+						You will come to a large roundabout,
+						<strong>Powder House Circle</strong>. Take the
+						<strong>second exit</strong>
+						onto
+						<strong>Holland Street</strong>.
+					</li>
+					<li>
+						Holland Street will turn into
+						<strong>Elm Street</strong>
+						as you approach Davis Square. Veer
+						<strong>left onto Summer Street</strong>
+						after passing the Davis Square MBTA station.
+					</li>
+					<li>
+						The VFW will be on your
+						<strong>left</strong>
+						at 351 Summer Street.
+					</li>
+				</ol>
+				<h3 id="parking">Parking</h3>
+				<p>The VFW has a dedicated parking lot with approximately 40 spaces including two (2) accessible parking spaces. Please be aware of signs indicating some of the spaces as resident only.</p>
+				<p>Metered street parking in Davis Square is free after 8pm. Please take care to avoid resident permit-only parking.</p>
+			</div>
+			<div id="vfw-photos">
+				<h2>Photos</h2>
+				<div class="photos">
+					<figure>
+						<a href="https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/vfwentrance.jpg">
+							<img src="https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/vfwentrance.jpg" alt="The front entrance of the VFW building as seen from the outside. A flat paved path leads to double glass doors that open outward."/>
+						</a>
+						<figcaption>The front entrance to the VFW</figcaption>
+					</figure>
 
-				<figure>
-					<a href="https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/vfw.jpg">
-						<img src="https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/vfw.jpg" alt={`The side of the VFW building as seen from Summer Street. The wall is made of flat, grey stone slabs and has large letters reading "George Dilboy VFW Post 529"`}/>
-					</a>
-					<figcaption>The side of the VFW building as seen from Summer Street</figcaption>
-				</figure>
+					<figure>
+						<a href="https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/vfw.jpg">
+							<img src="https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/vfw.jpg" alt={`The side of the VFW building as seen from Summer Street. The wall is made of flat, grey stone slabs and has large letters reading "George Dilboy VFW Post 529"`}/>
+						</a>
+						<figcaption>The side of the VFW building as seen from Summer Street</figcaption>
+					</figure>
+
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	{% if page.venues contains "church" %}
+		<div id="Guild Church" class="directions">
+			<h1>Directions to the Guild Church</h1>
+			<div class="tableOfContents">
+				<ul>
+					<li>
+						<a href="#church-transit">By Public Transit</a>
+					</li>
+					<li>
+						<a href="#church-driving">By Car</a>
+						<ul>
+							<li><a href="#church-parking">Parking</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#church-photos">Photos</a>
+					</li>
+				</ul>
+			</div>
+			<div id="church-transit">
+				<h2>By Train</h2>
+				<p>The nearest subway (or "T") station to the church is the
+					<strong>Davis Square station</strong>. The VFW is 0.3 miles from the station or about 6 to 10 minutes by foot.</p>
+				<ol>
+					<li>
+						Exit the station onto
+						<strong>College Ave</strong>
+						then turn left and walk straight until you meet
+						<strong>Elm Street</strong>.
+					</li>
+					<li>
+						Turn left and follow Elm Street until you pass
+						<strong>Dragon Pizza</strong>
+						on your left.
+					</li>
+					<li>
+						Keep right to stay on Elm Street until you cross Russell Street. The church is on the corner of Elm Street and Russell Street.
+					</li>
+				</ol>
+				<h2>By Bus</h2>
+				<p>The
+					<strong>87 bus stop</strong>
+					at the
+					<strong>intersection of Elm Street and Russel Street</strong>
+					is directly in front of the Guild Church. Exit the Davis Square T station onto
+					<strong>Holland Street</strong>
+					to catch the 87 bus.</p>
+			</div>
+			<div id="church-driving">
+				<h2>By Car</h2>
+				<h3>From US-1 Northbound or Southbound</h3>
+				<ol>
+					<li>
+						Take
+						<strong>exit 31</strong>
+						following signs for
+						<strong>Route 16 East / Mystic Valley Parkway / Arlington / Everett</strong>.
+					</li>
+					<li>
+						Merge onto
+						<strong>Route 16 East</strong>
+						(Mystic Valley Parkway) and continue toward I-93 North.
+					</li>
+					<li>
+						Take the ramp to
+						<strong>merge onto I-93 North toward Boston</strong>.
+					</li>
+					<li>
+						Follow directions from I-93 below.
+					</li>
+				</ol>
+				<h3>From I-93 Northbound or Southbound</h3>
+				<ol>
+					<li>
+						Take
+						<strong>Exit 29</strong>
+						off of I-93 for MA-28 / MA-38 / Mystic Avenue / Somerville / Medford.
+					</li>
+					<li>
+						Merge onto
+						<strong>Mystic Avenue</strong>
+						(MA-38 South). Follow Mystic Ave for about
+						<strong>1 mile</strong>.
+					</li>
+					<li>
+						Follow signs for
+						<strong>McGrath Highway</strong>
+						(MA-28 South) to continue onto McGrath Highway.
+					</li>
+					<li>
+						Use the right lane to take the exit with signs for
+						<strong>Medford Street/Broadway</strong>.
+					</li>
+					<li>
+						You will come to a large roundabout,
+						<strong>Powder House Circle</strong>. Take the
+						<strong>second exit</strong>
+						onto
+						<strong>Holland Street</strong>.
+					</li>
+					<li>
+						Holland Street will turn into
+						<strong>Elm Street</strong>
+						as you approach Davis Square. Keep
+						<strong>right to stay on Elm Street</strong>
+						after passing the Davis Square MBTA station.
+					</li>
+					<li>
+						The church will be on your
+						<strong>right</strong>
+						at 52 Russel Street.
+					</li>
+				</ol>
 
 			</div>
 		</div>
-	</div>
-	<div id="Guild Church">
-		<h1>Directions to the Guild Church</h1>
-		<div classname="transit">
-			<h2>By Train</h2>
-			<p>The nearest subway (or "T") station to the church is the
-				<strong>Davis Square station</strong>. The VFW is 0.3 miles from the station or about 6 to 10 minutes by foot.</p>
-			<ol>
-				<li>
-					Exit the station onto
-					<strong>College Ave</strong>
-					then turn left and walk straight until you meet
-					<strong>Elm Street</strong>.
-				</li>
-				<li>
-					Turn left and follow Elm Street until you pass
-					<strong>Dragon Pizza</strong>
-					on your left.
-				</li>
-				<li>
-					Keep right to stay on Elm Street until you cross Russell Street. The church is on the corner of Elm Street and Russell Street.
-				</li>
-			</ol>
-			<h2>By Bus</h2>
-			<p>The
-				<strong>87 bus stop</strong>
-				at the
-				<strong>intersection of Elm Street and Russel Street</strong>
-				is directly in front of the Guild Church. Exit the Davis Square T station onto
-				<strong>Holland Street</strong>
-				to catch the 87 bus.</p>
-		</div>
-		<div classname="driving">
-			<h2>By Car</h2>
-			<h3>From US-1 Northbound or Southbound</h3>
-			<ol>
-				<li>
-					Take
-					<strong>exit 31</strong>
-					following signs for
-					<strong>Route 16 East / Mystic Valley Parkway / Arlington / Everett</strong>.
-				</li>
-				<li>
-					Merge onto
-					<strong>Route 16 East</strong>
-					(Mystic Valley Parkway) and continue toward I-93 North.
-				</li>
-				<li>
-					Take the ramp to
-					<strong>merge onto I-93 North toward Boston</strong>.
-				</li>
-				<li>
-					Follow directions from I-93 below.
-				</li>
-			</ol>
-			<h3>From I-93 Northbound or Southbound</h3>
-			<ol>
-				<li>
-					Take
-					<strong>Exit 29</strong>
-					off of I-93 for MA-28 / MA-38 / Mystic Avenue / Somerville / Medford.
-				</li>
-				<li>
-					Merge onto
-					<strong>Mystic Avenue</strong>
-					(MA-38 South). Follow Mystic Ave for about
-					<strong>1 mile</strong>.
-				</li>
-				<li>
-					Follow signs for
-					<strong>McGrath Highway</strong>
-					(MA-28 South) to continue onto McGrath Highway.
-				</li>
-				<li>
-					Use the right lane to take the exit with signs for
-					<strong>Medford Street/Broadway</strong>.
-				</li>
-				<li>
-					You will come to a large roundabout,
-					<strong>Powder House Circle</strong>. Take the
-					<strong>second exit</strong>
-					onto
-					<strong>Holland Street</strong>.
-				</li>
-				<li>
-					Holland Street will turn into
-					<strong>Elm Street</strong>
-					as you approach Davis Square. Keep
-					<strong>right to stay on Elm Street</strong>
-					after passing the Davis Square MBTA station.
-				</li>
-				<li>
-					The church will be on your
-					<strong>right</strong>
-					at 52 Russel Street.
-				</li>
-			</ol>
-
-		</div>
-	</div>
+	{% endif %}
 </main>
