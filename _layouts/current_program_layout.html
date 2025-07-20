@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<meta
+		charset="UTF-8"/>
+		<!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/public/assets/css/fontawesome.css" rel="stylesheet"/>
+		<link href="/public/assets/css/solid.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Federo&display=swap" rel="stylesheet">
+		<link rel="icon" href="/favicon.ico"/>
+		<title>{{ page.title }}</title>
+	</head>
+	<body class="{{ page.theme }}-theme">
+		{% include current_show_header.html %}
+			{% if page.name == "information.md" %}
+				{% include information.html %}
+			{% elsif page.name == "directions.md" %}
+				{% include directions.html %}
+			{% else %}
+				{% include program.html %}
+			{% endif %}
+			{% if page.bios %}
+				{% include bios.html %}
+			{% endif %}
+	</body>
+</html>
