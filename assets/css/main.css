@@ -420,7 +420,7 @@ img {
 
     .dates {
       text-align: center;
-      font-size: 1.3em;
+      font-size: 1.1em;
       /* margin: 0.5em 0; */
       display: flex;
       justify-content: space-between;
@@ -439,7 +439,8 @@ img {
     }
 
     .venue {
-      margin: 1.3em 0;
+      margin: 1.2em 0;
+      font-size: 1.15em;
     }
 
     .buttonsAndLinks {

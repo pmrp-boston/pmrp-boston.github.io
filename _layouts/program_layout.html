@@ -16,13 +16,18 @@
 		<title>{{ page.title }}</title>
 	</head>
 	<body class="{{ page.theme }}-theme">
-		{% include header.html %}
-			{% if page.name == "information.md" %}
-				{% include information.html %}
-			{% elsif page.name == "directions.md" %}
-				{% include directions.html %}
-			{% else %}
-				{% include program.html %}
-			{% endif %}
+		<header>
+			{% include header.html %}
+		</header>
+		{% if page.name == "information.md" %}
+			{% include information.html %}
+		{% elsif page.name == "directions.md" %}
+			{% include directions.html %}
+		{% else %}
+			{% include program.html %}
+		{% endif %}
+		<footer>
+			{% include footer.html %}
+		</footer>
 	</body>
 </html>
