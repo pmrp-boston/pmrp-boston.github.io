@@ -5,7 +5,7 @@ showKey: bullets
 theme: summer-mysteries
 imgSrc: https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/bulletsbanner.png
 imgAlt: "Bullets Over Boston - Featuring: After the Thin Man! Samantha Spade!"
-programInfo2: The show runs for approximately 1 hour with no intermission. House doors open at 7:30 PM to give time to buy or pick up reserved tickets, purchase refreshments, and find your seat before the show starts at 8 PM.
+programInfo2: The show runs for approximately 90 miutes with a 10 minute intermission between plays. House doors open at 7:30 PM to give time to buy or pick up reserved tickets, purchase refreshments, and find your seat before the show starts at 8 PM.
 shows:
   - name: Samantha Spade and the Steve Starr Caper
     foleyCredits:
