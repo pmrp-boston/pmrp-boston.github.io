@@ -1,7 +1,6 @@
 ---
 title: The Post Meridian Radio Players Present - The Menagerie
 layout: program_layout
-permalink: /program/menagerie/
 slug: menagerie
 theme: trek
 imgSrc: https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/menageriebanner.jpg
