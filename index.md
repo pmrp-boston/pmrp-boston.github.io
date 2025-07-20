@@ -1,6 +1,6 @@
 ---
 title: The Post Meridian Radio Players Present - Bullets Over Boston
-layout: program_layout
+layout: current_program_layout
 showKey: bullets
 theme: summer-mysteries
 imgSrc: https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/bulletsbanner.png
