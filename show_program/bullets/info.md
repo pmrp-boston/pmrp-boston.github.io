@@ -1,11 +1,11 @@
 ---
 title: Bullets Over Boston
 layout: program_layout
-slug: bullets
+showKey: bullets
 theme: summer-mysteries
 shows:
   - title: Samantha Spade and the Steve Starr Caper
-    slug: spade
+    showKey: spade
     contentNote: "Content context note"
     contentWarnings:
       - Guns and gun violence
@@ -14,7 +14,7 @@ shows:
     soundWarnings:
       - Gunshots at approximately X min (practical)
   - title: After the Thin Man
-    slug: thinman
+    showKey: thinman
     contentNote: "Content context note"
     contentWarnings:
       - Guns and gun violence

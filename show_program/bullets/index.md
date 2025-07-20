@@ -1,7 +1,7 @@
 ---
 title: The Post Meridian Radio Players Present - Bullets Over Boston
 layout: program_layout
-slug: bullets
+showKey: bullets
 theme: summer-mysteries
 imgSrc: https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/bulletsbanner.png
 imgAlt: "Bullets Over Boston - Featuring: After the Thin Man! Samantha Spade!"

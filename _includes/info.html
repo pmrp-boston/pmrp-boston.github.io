@@ -23,11 +23,11 @@
           </li>
           {% for show in page.shows %}
             <li>
-              <a href="#show-{{ show.slug }}">About the Show - <em>{{ show.title }}</em></a>
+              <a href="#show-{{ show.showKey }}">About the Show - <em>{{ show.title }}</em></a>
               <ul>
-                <li><a href="#contentWarnings-{{ show.slug }}">Content Warnings</a></li>
-                <li><a href="#sfx-{{ show.slug }}">Sound Effects</a></li>
-                <li><a href="#misophonia-{{ show.slug }}">Misophonia Warnings</a></li>
+                <li><a href="#contentWarnings-{{ show.showKey }}">Content Warnings</a></li>
+                <li><a href="#sfx-{{ show.showKey }}">Sound Effects</a></li>
+                <li><a href="#misophonia-{{ show.showKey }}">Misophonia Warnings</a></li>
               </ul>
             </li>
           {% endfor %}
@@ -68,18 +68,18 @@
           <p>While we cannot guarantee a fragrance-free space, we have performers who are sensitive to fragrances and encourage attendees to avoid perfumes, colognes, or other sprayed fragrances.</p>
         </div>
         {% for show in page.shows %}
-          <div id="show-{{ show.slug }}">
+          <div id="show-{{ show.showKey }}">
             <h2>About the Show - <em>{{ show.title }}</em></h2>
-            <h3 id="contentWarnings-{{ show.slug }}">Content Warnings</h3>
+            <h3 id="contentWarnings-{{ show.showKey }}">Content Warnings</h3>
             <p>{{ show.contentNote }}</p>
             <ul class="warnings">
               {% for warning in show.contentWarnings %}
                 <li>{{ warning }}</li>
               {% endfor %}
             </ul>
-            <h3 id="sfx-{{ show.slug }}">Sound Effects Info</h3>
+            <h3 id="sfx-{{ show.showKey }}">Sound Effects Info</h3>
             <p>The show contains a combination of practical and digital sound effects throughout. There will be a Foley artist performing alongside the actors creating sound effects by hand with a variety of physical items, and there will also be digital cues. Both practical and digital sounds will be amplified through speakers.</p>
-            <h3 id="misophonia-{{ show.slug }}">Misophonia Warnings</h3>
+            <h3 id="misophonia-{{ show.showKey }}">Misophonia Warnings</h3>
             <p>Some of the sounds used in the show may be unpleasant for some audience members.</p>
             <ul class="warnings">
               {% for warning in show.soundWarnings %}

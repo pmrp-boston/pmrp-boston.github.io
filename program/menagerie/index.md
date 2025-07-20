@@ -1,7 +1,7 @@
 ---
 title: The Post Meridian Radio Players Present - The Menagerie
 layout: program_layout
-slug: menagerie
+showKey: menagerie
 theme: trek
 imgSrc: https://pmrp.nyc3.cdn.digitaloceanspaces.com/guide/menageriebanner.jpg
 imgAlt: "imgAlt: A blocky stylized drawing of a woman in a Starfleet command uniform with the words \"The Post Meridian Radio Players Present Gender Swapped Star Trek: The Menagerie\" with a banner reading \"One Night Only\""
