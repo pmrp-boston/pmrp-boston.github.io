@@ -164,7 +164,7 @@
 		</div>
 	{% endif %}
 	{% if page.venues contains "church" %}
-		<div id="Guild Church" class="directions">
+		<div id="church" class="directions">
 			<h1>Directions to the Guild Church</h1>
 			<div class="tableOfContents">
 				<ul>
@@ -277,6 +277,53 @@
 					</li>
 				</ol>
 
+			</div>
+		</div>
+	{% endif %}
+	{% if page.venues contains "mosesian" %}
+		<div id="mosesian" class="directions">
+			<h1>Directions to the Mosesian Center for the Arts</h1>
+			<p class="highlight-info">
+				See the Mosesian's own
+				<a href="https://www.mosesianarts.org/visit/getting-here">"Getting Here" page</a>
+				for detailed directions, an illustrated  map, and updated information regarding
+				<strong>ongoing construction</strong>
+				to the Arsenal on the Charles campus.
+			</p>
+			<div class="tableOfContents">
+				<ul>
+					<li>
+						<a href="#mosesian-transit">By Public Transit</a>
+					</li>
+					<li>
+						<a href="#mosesian-driving">By Car</a>
+						<ul>
+							<li><a href="#mosesian-parking">Parking</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#mosesian-photos">Photos</a>
+					</li>
+				</ul>
+			</div>
+			<div id="mosesian-transit">
+				<h2>By Bus</h2>
+				<p>You can take the
+					<strong>70 bus route</strong>
+					to the intersection of
+					<strong>Arsenal St and Talcott Ave</strong>
+					coming from either direction. The Mosesian
+					is one block away.</p>
+			</div>
+			<div id="mosesian-driving">
+				<h2>By Car</h2>
+				<p>
+					See the Mosesian's own
+					<a href="https://www.mosesianarts.org/visit/getting-here">"Getting Here" page</a>
+					for detailed driving directions.
+				</p>
+				<h3 id="mosesian-parking">Parking</h3>
+				<p>Free parking is available at the Arsenal on the Charles garage. There are four accessible parking spaces on Kingsbury Ave with a ramp to the building.</p>
 			</div>
 		</div>
 	{% endif %}
