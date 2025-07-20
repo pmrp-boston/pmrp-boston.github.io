@@ -34,18 +34,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-collections:
-  programs:
-    output: true       # necessary to generate pages
-    permalink: /program/:name/  # URL format
-
-defaults:
-  - scope:
-      path: ""         # applies globally
-      type: programs   # applies only to the "programs" collection
-    values:
-      layout: program  # use _layouts/program.html by default
-
 
 # Exclude from processing.
 # The following items will not be processed, by default.
