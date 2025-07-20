@@ -421,20 +421,25 @@ img {
     .dates {
       text-align: center;
       font-size: 1.3em;
-      margin: 0.5em 0;
+      /* margin: 0.5em 0; */
+      display: flex;
+      justify-content: space-between;
+    }
+    .dates.single {
+      justify-content: center;
+    }
+    .datesByVenue {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 1em 0;
+    }
+    .datesByVenue span {
+      display: block;
     }
 
-    .locations {
-      display: flex;
-      justify-content: center;
-      margin: 1em 0;
-
-      .location {
-        display: inline-block;
-        white-space: pre-line;
-        text-align: justify;
-        text-align-last: center;
-      }
+    .venue {
+      margin: 1.3em 0;
     }
 
     .buttonsAndLinks {

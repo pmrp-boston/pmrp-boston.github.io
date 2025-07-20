@@ -45,3 +45,31 @@ shows:
           - "Talosian Magistrate"
           - "Dr. Haskin"
 ---
+<h1 class="fullTitle">{{ page.title }}</h1>
+<div class="dates single">
+  <div class="datesByVenue">
+    <div>
+      <span>Friday, July 18, 2025, at 8:00pm</span>
+    </div>
+    <div class="venue">
+      <span>{{ site.data.venues.vfw.name}}</span>
+      <span>{{ site.data.venues.vfw.address}}</span>
+      <span>
+        <a href="{{ site.data.venues.vfw.gMapsLink }}">View on Google Maps</a>
+      </span>   
+    </div>
+  </div>
+</div>
+<p>{{ page.intro }}</p>
+
+<div class="buttonsAndLinks">
+  <a href="{{ page.ticketLink }}" target="_blank" class="ticketLink">
+    Reserve your seat
+  </a>
+</div>
+<p></p>
+<p>The show runs for approximately 90 miutes with a 10 minute intermission between plays. House doors open at 7:30 PM to give time to buy or pick up reserved tickets, purchase refreshments, and find your seat before the show starts at 8 PM.</p>
+<div class="buttonsAndLinks">
+  <a href="directions">Directions</a>
+  <a href="information">Information and Accessibility</a>
+</div>

@@ -1,39 +1,16 @@
 <main id="content">
-			<div class="programHeader">
-				<div class='heroBannerImg'>
-					<img src={{ page.imgSrc }} alt={{ page.imgAlt }} class="heroBannerImage"/>
-				</div>
-			</div>
-<div class="ATFshowInfo">
-	<h1 class="fullTitle">{{ page.title }}</h1>
-	<div class="dates">
-		{%for date in page.dates %}
-			<span key={index} class="date">
-				{{ date }}
-			</span>
-		{% endfor %}
+	<div class="programHeader">
+		<div class='heroBannerImg'>
+			<img src={{ page.imgSrc }} alt={{ page.imgAlt }} class="heroBannerImage"/>
+		</div>
 	</div>
-	<div class="locations">
-		{% for location in page.locations %}
-			<a href="#" key={index} class="location">
-				{{ location }}
-			</a>
-		{% endfor %}
+	<div class="ATFshowInfo">
+		{{ content }}
 	</div>
-	<p>{{ page.intro }}</p>
-
-	<div class="buttonsAndLinks">
-		<a href={{ page.ticketLink }} target="_blank" class="ticketLink">
-			Reserve your seat
-		</a>
-	</div>
-	<p>{{ page.programInfo1 }}</p>
-	<p>{{ page.programInfo2 }}</p>
-	<div class="buttonsAndLinks">
-		<a href="directions">Directions</a>
-		<a href="information">Information and Accessibility</a>
-	</div>
-</div>
-{% for show in page.shows %}
-    {% include creditsBlock.html show=show %}
-{% endfor %}
+	{% for show in page.shows %}
+		{% include creditsBlock.html show=show %}
+	{% endfor %}
+	{% if page.bios %}
+		{% include bios.html %}
+	{% endif %}
+</main>
