@@ -1,6 +1,6 @@
 ---
 title: Bullets Over Boston
-layout: program
+layout: program_layout
 permalink: /program/bullets/information
 slug: bullets
 theme: summer-mysteries

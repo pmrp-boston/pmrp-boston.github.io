@@ -1,6 +1,6 @@
 ---
 title: The Post Meridian Radio Players Present - The Menagerie
-layout: program
+layout: program_layout
 permalink: /program/menagerie/
 slug: menagerie
 theme: trek
