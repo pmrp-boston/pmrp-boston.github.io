@@ -1,20 +1,38 @@
+
 <main id="content">
 	<h1>Information and Accessibility</h1>
 	<div classname="tableOfContents">
 		<ul>
-			{% for venue_key in page.venues %}
-				{% assign venue = site.data.venues[venue_key] %}
+			{% if page.venues contains "vfw" %}
 				<li>
-					<a href="#{{ venue_key }}">About the Venue -
-						{{ venue.name }}</a>
+					<a href="#vfw">About the Venue -
+						George Dilboy VFW post 529</a>
 					<ul>
-						<li><a href="#navigation-{{ venue_key }}">Moving Around the Space</a></li>
-						<li><a href="#bathrooms-{{ venue_key }}">Bathrooms</a></li>
-						<li><a href="#seating-{{ venue_key }}">Seating</a></li>
-						<li><a href="#temperature-{{ venue_key }}">Temperature</a></li>
+						<li><a href="#navigation-vfw">Moving Around the Space</a></li>
+						<li><a href="#bathrooms-vfw">Bathrooms</a></li>
+						<li><a href="#seating-vfw">Seating</a></li>
+						<li><a href="#temperature-vfw">Temperature</a></li>
 					</ul>
 				</li>
-			{% endfor %}
+			{% endif %}
+			{% if page.venues contains "church" %}
+				<li>
+					<a href="#church">About the Venue -
+						Guild Church</a>
+					<ul>
+						<li><a href="#navigation-church">Moving Around the Space</a></li>
+						<li><a href="#bathrooms-church">Bathrooms</a></li>
+						<li><a href="#seating-church">Seating</a></li>
+						<li><a href="#temperature-church">Temperature</a></li>
+					</ul>
+				</li>
+			{% endif %}
+			{% if page.venues contains "mosesian" %}
+				<li>
+					<a href="#mosesian">About the Venue -
+						Mosesian Center for the Arts</a>
+				</li>
+			{% endif %}
 			<li>
 				<a href="#environment">Allergies</a>
 				<ul>
@@ -22,18 +40,20 @@
 					<li><a href="#frangrances">Fragrances</a></li>
 				</ul>
 			</li>
-			{% for show in page.shows %}
-				<li>
-					<a href="#show-{{ show.showKey }}">About the Show -
-						<em>{{ show.title }}</em>
-					</a>
-					<ul>
-						<li><a href="#contentWarnings-{{ show.showKey }}">Content Warnings</a></li>
-						<li><a href="#sfx-{{ show.showKey }}">Sound Effects</a></li>
-						<li><a href="#misophonia-{{ show.showKey }}">Misophonia Warnings</a></li>
-					</ul>
-				</li>
-			{% endfor %}
+			{% if page.showContentReady == true %}
+				{% for show in page.shows %}
+					<li>
+						<a href="#show-{{ show.showKey }}">About the Show -
+							<em>{{ show.title }}</em>
+						</a>
+						<ul>
+							<li><a href="#contentWarnings-{{ show.showKey }}">Content Warnings</a></li>
+							<li><a href="#sfx-{{ show.showKey }}">Sound Effects</a></li>
+							<li><a href="#misophonia-{{ show.showKey }}">Misophonia Warnings</a></li>
+						</ul>
+					</li>
+				{% endfor %}
+			{% endif %}
 		</ul>
 	</div>
 	<div classname="info">
@@ -70,20 +90,12 @@
 		{% endif %}
     {% if page.venues contains "mosesian" %}
 			<div id="mosesian">
-				<h2>About the Venue - Guild mosesian</h2>
-				<h3 id="navigation-mosesian">Moving Around the Space</h3>
-				<p>Unfortunately the mosesian is
-					<strong>not wheelchair accessible</strong>
-					and the entrance is up X stairs with
-					<strong>no ramp</strong>. Once inside, the floor is hard wood with some irregularities due to age. Upon entering you will see the ticket table to your left and the merchandise and concessions table to your right. Proceed straight to enter the main sanctuary where the performance will take place. The floor in the sanctuary has a slight tilt away from the entrance.</p>
-				<h3 id="bathrooms-mosesian">Bathrooms</h3>
-				<p>There are two multi-stall bathrooms in the mosesian, both on the
-					<strong>lower level</strong>
-					of the building. When you enter through the front doors, turn left and go down all the way down the stairs then take the door to your right to reach a bathoom containing two stalls and one sink. Alternatively, go right from the front doors and all the way down the stairs then take the door on your left to reach a bathroom containing one stall, one urinal, and one sink. We invite visitors to use whichever bathroom you feel comfortable.</p>
-				<h3 id="seating-mosesian">Seating</h3>
-				<p>The seating in the mosesian is two rows of traditional wooden pews with aisles on either side and in the middle.</p>
-				<h3 id="temperature-mosesian">Temperature</h3>
-				<p>On hot days the building can become quite warm especially with a large number of people inside. The church does not have air conditioning and is instead equipped with ceiling fans, and the windows may be cracked open. For cold days the church does have radiator heating.</p>
+				<h2>About the Venue - Mosesian Center for the Arts</h2>
+				<p class="highlight-info">
+				See the Mosesian's own
+				<a href="https://www.mosesianarts.org/visit/accessibility">"Accessibility" page</a>
+				for detailed information on seating, building maps, assistive listening devices, and more.
+			</p>
 			</div>
 		{% endif %}
 		<div id="environment">
@@ -93,28 +105,30 @@
 			<h3 id="fragrance">Fragrances</h3>
 			<p>While we cannot guarantee a fragrance-free space, we have performers who are sensitive to fragrances and encourage attendees to avoid perfumes, colognes, or other sprayed fragrances.</p>
 		</div>
-		{% for show in page.shows %}
-			<div id="show-{{ show.showKey }}">
-				<h2>About the Show -
-					<em>{{ show.title }}</em>
-				</h2>
-				<h3 id="contentWarnings-{{ show.showKey }}">Content Warnings</h3>
-				<p>{{ show.contentNote }}</p>
-				<ul class="warnings">
-					{% for warning in show.contentWarnings %}
-						<li>{{ warning }}</li>
-					{% endfor %}
-				</ul>
-				<h3 id="sfx-{{ show.showKey }}">Sound Effects Info</h3>
-				<p>The show contains a combination of practical and digital sound effects throughout. There will be a Foley artist performing alongside the actors creating sound effects by hand with a variety of physical items, and there will also be digital cues. Both practical and digital sounds will be amplified through speakers.</p>
-				<h3 id="misophonia-{{ show.showKey }}">Misophonia Warnings</h3>
-				<p>Some of the sounds used in the show may be unpleasant for some audience members.</p>
-				<ul class="warnings">
-					{% for warning in show.soundWarnings %}
-						<li>{{ warning }}</li>
-					{% endfor %}
-				</ul>
-			</div>
-		{% endfor %}
+		{% if page.showContentReady == true %}
+			{% for show in page.shows %}
+				<div id="show-{{ show.showKey }}">
+					<h2>About the Show -
+						<em>{{ show.title }}</em>
+					</h2>
+					<h3 id="contentWarnings-{{ show.showKey }}">Content Warnings</h3>
+					<p>{{ show.contentNote }}</p>
+					<ul class="warnings">
+						{% for warning in show.contentWarnings %}
+							<li>{{ warning }}</li>
+						{% endfor %}
+					</ul>
+					<h3 id="sfx-{{ show.showKey }}">Sound Effects Info</h3>
+					<p>The show contains a combination of practical and digital sound effects throughout. There will be a Foley artist performing alongside the actors creating sound effects by hand with a variety of physical items, and there will also be digital cues. Both practical and digital sounds will be amplified through speakers.</p>
+					<h3 id="misophonia-{{ show.showKey }}">Misophonia Warnings</h3>
+					<p>Some of the sounds used in the show may be unpleasant for some audience members.</p>
+					<ul class="warnings">
+						{% for warning in show.soundWarnings %}
+							<li>{{ warning }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}
+		{% endif %}
 	</div>
 </main>

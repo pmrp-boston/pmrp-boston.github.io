@@ -3,6 +3,7 @@ title: Bullets Over Boston
 layout: current_program_layout
 showKey: bullets
 theme: summer-mysteries
+showContentReady: false
 shows:
   - title: Samantha Spade and the Steve Starr Caper
     showKey: spade
