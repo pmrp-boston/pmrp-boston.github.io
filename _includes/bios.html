@@ -1,7 +1,9 @@
+{% assign show_name = page.showKey %}
+{% assign bio_data = site.data.bios[show_name] %}
 <div classname="biosBlock">
 	<h2 classname="biosBlock-title">Cast & Crew Bios</h2>
 	<div classname="biosBlock-wrapper">
-		{% for bio in page.bios %}
+		{% for bio in bio_data.bios %}
 			<div id="{{ bio.name }}">
 				<div classname="biosBlock-singleBio">
 					<h4 classname="biosBlock-singleBio--title">{{ bio.name }}</h4>
