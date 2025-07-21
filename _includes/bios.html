@@ -8,7 +8,7 @@
 				<div classname="biosBlock-singleBio">
 					<h4 classname="biosBlock-singleBio--title">{{ bio.name }}</h4>
 					<div classname="biosBlock-singleBio--copyText">
-						<p>{{ bio.bio }}</p>
+						<p>{{ bio.bio | markdownify}}</p>
 					</div>
 				</div>
 			</div>

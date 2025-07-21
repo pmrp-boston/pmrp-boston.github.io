@@ -115,6 +115,9 @@ shows:
       - name: "Jaimie Carlson"
         roles:
           - "Foley Coordinator"
+bios: true
+ 
+
 ---
 
 <h1 class="fullTitle">{{ page.title }}</h1>
