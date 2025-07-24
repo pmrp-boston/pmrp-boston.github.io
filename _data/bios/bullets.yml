@@ -2,19 +2,32 @@ bios:
   - name: "JB Brown"
     bio: "JB Brown (Announcer, After the Thin Man), a California native, has been active in the theatre arts for over thirty years. JB received a Master of Letters in Shakespeare and Performance as well as an MFA with an emphasis in directing Shakespeare from Mary Baldwin University in Staunton, Virginia. He has taught, acted, voice-acted, and directed with various academic and professional theatre groups over the years such as Mary Baldwin in association with the Blackfriars Playhouse, Utah Tech University, Utah Valley University, Hale Center Theatre-Orem, the Kingsmen Shakespeare Company, Sundance Summer Theatre, Utah Shakespeare Festival, and Motley Sounds. Some of his more notable acting performances include Benedick in Much Ado About Nothing, Dromio of Ephesus in The Comedy of Errors, Andrew Wyke in Sleuth, Major General Stanley in The Pirates of Penzance, John Barrymore in I Hate Hamlet, and Fin in One Foot for the Great Salt Lake Fringe Festival. Most recently, he has performed in Hale Center Theatre Orem’s A Christmas Carol as the Ghost of Christmas Present and Marley’s Ghost and locally in the Burlington Players production of The Book of Will as Henry Condell."
   - name: "Simone Agha"
-    bio: "Simone Agha (Foley, The Steve Starr Caper) is thrilled to be once again making noise for a PMRP production. This is her *mumbles*th show stomping and <unintelligible noise> with PMRP."
+    bio: "Simone Agha (Foley, The Steve Starr Caper) is thrilled to be once again making noise for a PMRP production. This is her *mumbles*th show stomping and &lt;unintelligible noise&gt; with PMRP."
+  - name: "Terry Sage Bernard"
+    bio: "Terry Sage Bernard (Foley, The Steve Starr Caper) had ninety bars of gold,<br>
+      As I sailed, as I sailed<br>
+      I'd ninety bars of gold,<br>
+      As I sailed,<br>
+      I'd ninety bars of gold,<br>
+      And dollars manifold,<br>
+      With riches uncontrolled,<br>
+      As I sailed."
   - name: Marielle Boudreau
     bio: "Marielle Boudreau (Ensemble, After the Thin Man) is excited to be making her PMRP debut. She has previously performed with groups including the Gazebo Players, Theatre To Go, Riverside Theatre Works, and Theatre@First. She is also featured as a playwright in this year's Festival@First."
   - name: "Jaimie Carlson"
     bio: "Jaimie Carlson (Foley Coordinator and Assistant Director, After The Thin Man)’s previous roles with PMRP include adapting The Most Dangerous Game and Foley coordinating for various shows. When not choreographing sword fights or breaking glass for PMRP, Jaimie can be found programming robots, playing quizbowl, or cramming more books into her apartment. She would like to thank Hobbes for Asta inspiration. *Clink!*"
   - name: "Jess Conger-Henry"
     bio: "Jess Conger-Henry made a name for herself as a Major General in the War of 1812. She parlayed her military success into a career in politics, being elected the 9th President of the United States. Unfortunately, she was taken ill with typhoid fever, and died just 31 days after being sworn into office. The preceding biography may contain some errors in its historical accuracy."
+  - name: "Mikah Connolly"
+    bio: "Mikah Connolly (Dancer, After the Thin Man) reminds me of the babe. The babe with the power. The power of voodoo. You do, you do."
   - name: Kim Dauber
     bio: "Kim Dauber (Ensemble, After the Thin Man) is back to cause more trouble! She is delighted to be in a show with so many talented people. Please enjoy her shenanigans."
   - name: Caroline DeBrota
     bio: "Caroline DeBrota (Samantha Spade, The Steve Starr Caper) (VOICEOVER): I stared down across the empty cast bio before me. Ever since I closed that performance of Night of the Living Deadback in 2023, I had known in my gut that I would one day be back on the PMRP stage...but had I realized it would be in my first truly \"Starr\"-ing role, after over 18 years of acting? The thing was, there really was more to the character of Samantha Spade than met the eye, er, Private Eye, if you will. Her no-nonsense detective work reminded me of my own calculated approach to my day job as an engineer, and all the lovey-dovey stuff with that secretary of hers certainly called to mind my relationship with the handsome actor Shawyoun Shaidani--a man so irresistible that we've found ourselves entangled in the past twelve shows together..... I snapped out of my recollective trance, realizing I had nothing to write in the cast bio, as I really had nothing to prove. And suddenly it struck me...that Dundee spelled backwards is Eednud!"
   - name: "Sue Downing"
     bio: "Sue Downing (Aunt Katherine, After the Thin Man) has been a voice actor in several shows with PMRP including three Halloween sets and most recently as an understudy for Omar in “Dungeons and Townies” by Michael McAfee. Sue also directed “Family Business” by Tegan Garon on behalf of PMRP sponsorship in the 2023 Boston Theater Marathon XXV."
+  - name: "Joev Dubach"
+    bio: "Joev Dubach (Ensemble, After the Thin Man) is a long-time PMRPer and wakes up wicked early for the November Project. We think his house has secret leprechauns."
   - name: Naomi Ibasitas
     bio: "Naomi Ibasitas (Nora Charles, After the Thin Man) is a Filipino-American actor, stage manager, and director within the Boston fringe and community theatre scene, and ever so excited to be reprising her role as Nora Charles in The Thin Man Returns! Past credits with PMRP include Sulinor the Mighty in Townies and Dragons: Barrel Full of Peril, Lieutenant Sulu in Gender-Swapped Star Trek, and as director of The Furnished Floor. You can also catch her in The Mrs. Hawking play series on YouTube! Hope you all enjoy this next thrilling mystery!"
   - name: Jeremy Holstein
@@ -45,6 +58,8 @@ bios:
     bio: "Tori Queeno (Assistant Director, The Steve Starr Caper) is thrilled to be working on their 21st production with PMRP! When not making radio theater, they can be found creating foley sound effects for various other creative projects, performing in TTRPG actual plays, editing and writing for TTRPGs, working with Gehenna Gaming at various gaming conventions, doing too many crafts, and playing too many video games. They would like to thank their fiancé, Jon, for appreciating their whimsy, and their cat, Persephone for being both adorable and evil. See more of Tori's adventures at [thatnerdtori.carrd.co](thatnerdtori.carrd.co)"
   - name: "Jay Sekora"
     bio: "Jay Sekora (Sound Engineer) has worked with PMRP as an actor and director as well as working on sound. He directed PMRP’s adaptations of “THEM!”, “Metropolis”, and ”Filibus”, and adapted and directed “Night of the Living Dead”. His favorite PMRP acting roles were a drunken astronaut in “Junkyard” and the homicidal narrator in “The Tell-Tale Heart”. And he’s done a lot of sound engineering and other sound-tech work. He thanks his chosen family members Zeph and Sally and especially his beloved Mare Freed for getting him back into theater after a long absence, and for a wonderful shared life together. Nineteen years this August!"
+  - name: Jiayi Shao
+    bio: "Jiayi Shao (Foley Understudy, The Steve Starr Caper) might be Batman. I’m just saying, nobody has ever seen them in the same room."
   - name: Shawyoun Shaidani
     bio: "Shawyoun Shaidani (David, After the Thin Man) is excited to return to his third show with PMRP, having previously appeared in “Metropolis” and “Night of the Living Dead.” He is also delighted to be in a twelfth show with his beloved Caroline! Recently, they also appeared together in Theater Company of Saugus’ productions of “Picasso at the Lapin Agile,” “Evil Dead: The Musical,” and “Puffs.” He thanks the cast and crew for making this experience peachy as usual for PMRP. Finally, he would like to thank his friends and family for always supporting his theatrical adventures through thick and Thin (Man)!"
   - name: Racer Soares
@@ -59,4 +74,3 @@ bios:
     bio: "Meg Wickham (Stage Manager) is the (officially) unofficial PMRP stalker and has a bizarre love for herding cats. This is her 16th year haunting the group and the 10th since she decided to insert herself into the process. Like a bad penny, they can’t get rid of her."
   - name: "Jack Wickwire"
     bio: "Jack Wickwire (Seller, The Steve Start Caper) has acted and designed for many MetroWest community theaters. His credits include: Makeup design for Ghosts (for PMRP), Picasso at the Lapin Agile, Lend Me a Tenor (TCAN), Prelude to a Kiss, Waiting in the Wings, Agatha Christie Made Me Do It, (for Belmont) and Is He Dead, Sunday in the Park With George (for Vokes); Batboy, Memory of Water (for Arlington)"
-  - name:
