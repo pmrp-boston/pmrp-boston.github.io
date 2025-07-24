@@ -50,7 +50,7 @@ shows:
       - name: Arturo Lichauco
         role: understudy
     credits: 
-      - name: "Alex Lafreniere"
+      - name: "Alex LaFreniere"
         roles:
           - "Nick"
       - name: "Naomi Ibasitas"

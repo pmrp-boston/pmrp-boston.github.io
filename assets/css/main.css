@@ -424,7 +424,7 @@ img {
       /* margin: 0.5em 0; */
       display: flex;
       justify-content: space-between;
-      @media (min-width: 768px) {
+      @media (max-width: 768px) {
         flex-direction: column;
       }
     }
