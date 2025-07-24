@@ -13,7 +13,8 @@ shows:
     foleyCredits:
       - name: Simone Agha
       - name: Terry Sage Bernard
-        understudy: Jiayi Shao
+      - name: Jiayi Shao
+        role: understudy
     credits:
       - name: "Zack Murphy"
         roles:
@@ -46,7 +47,8 @@ shows:
     foleyCredits:
       - name: Daniel Lemr
       - name: Racer Soares
-        understudy: Arturo Lichauco
+      - name: Arturo Lichauco
+        role: understudy
     credits: 
       - name: "Alex Lafreniere"
         roles:

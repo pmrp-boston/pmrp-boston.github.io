@@ -25,9 +25,14 @@
 			</a>
 		</dl>
 	{% endfor %}
+	<hr />
 	{% for credit in include.show.foleyCredits %}
 		<dl class="singleCredit">
-			<dt class="singleCredit-role">Foley</dt>
+			{% if credit.role %}
+				<dt class="singleCredit-role">Foley Understudy</dt>
+			{% else %}
+				<dt class="singleCredit-role">Foley</dt>
+			{% endif %}
 			<dt class="dots"></dt>
 			<a href="#{{ credit.name }}" class="singleCredit-name">
 				{{ credit.name }}
