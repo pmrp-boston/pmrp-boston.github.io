@@ -172,27 +172,6 @@ img {
   }
 }
 
-.dark-mode-logo, .light-mode-logo {
-  filter: none;
-  -webkit-filter: none;
-}
-
-.dark-mode-logo {
-  display: none;
-}
-.light-mode-logo {
-  display: block;
-}
-
-@media (prefers-color-scheme: dark) {
-  .light-mode-logo {
-    display: none;
-  }
-  .dark-mode-logo {
-    display: block;
-  }
-}
-
 .topMenu {
   display: flex;
   flex-direction: column;
@@ -200,8 +179,6 @@ img {
   align-items: center;
   justify-content: space-around;
 
-  
-  
   .toggleDarkTheme {
     display: flex;
     flex-direction: column;
