@@ -27,7 +27,7 @@ shows:
           - "Eddie"
       - name: "Hilary Soltz Short"
         roles:
-          - "Jay Polhouse"
+          - "Jay Wellington Starr/Inspector Polhouse"
       - name: "Kristina Spinney"
         roles:
           - "Ruby"
