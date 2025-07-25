@@ -25,7 +25,7 @@ shows:
       - name: "Émile Lewis"
         roles:
           - "Eddie"
-      - name: "Hilary Short"
+      - name: "Hilary Soltz Short"
         roles:
           - "Jay Polhouse"
       - name: "Kristina Spinney"
