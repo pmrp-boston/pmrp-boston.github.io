@@ -22,7 +22,7 @@ shows:
       - name: "Caroline Debrota"
         roles:
           - "Samantha Spade"
-      - name: "Emile Lewis"
+      - name: "Émile Lewis"
         roles:
           - "Eddie"
       - name: "Hilary Short"
