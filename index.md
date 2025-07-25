@@ -160,7 +160,7 @@ bios: true
 
 <div class="buttonsAndLinks">
   <a href="{{ page.ticketLink }}" target="_blank" class="ticketLink">
-    Buy or Reserve your seat
+    Buy or Reserve Your Ticket
   </a>
 </div>
 <p>The entire show lasts around two hours. <span class="italic">Samantha Spade</span> is approximately 40 minutes and <span class="italic">After the Thin Man</span> is approximately 60 minutes with a 10 minute intermission in between. House doors open at 7:30 PM to give time to buy or pick up reserved tickets, purchase refreshments, and find your seat before the show starts at 8 PM.</p>
