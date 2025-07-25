@@ -74,7 +74,7 @@ shows:
       - name: "Jess Conger-Henry"
         roles:
           - "Polly"
-      - name: "Maeve Mccluskey"
+      - name: "Maeve McCluskey"
         roles:
           - "Malloy"
       - name: "Kim Dauber"
